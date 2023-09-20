@@ -1,0 +1,23 @@
+cabal-version:      3.4
+name:               haskell-rinha-compiler
+version:            0.1.0.0
+synopsis:           A compiler for a comipler challenge hosted in GitHub
+homepage:           https://github.com/ivelten/haskell-rinha-compiler
+license:            MIT
+license-file:       LICENSE
+author:             Ismael Velten
+maintainer:         ismaelcarlosvelten@gmail.com
+category:           Development
+build-type:         Simple
+extra-doc-files:    CHANGELOG.md
+
+common warnings
+    ghc-options: -Wall
+
+executable haskell-rinha-compiler
+    import:           warnings
+    main-is:          Main.hs
+    other-modules:    Syntax
+    build-depends:    base, megaparsec, diagnose
+    hs-source-dirs:   src
+    default-language: Haskell2010
